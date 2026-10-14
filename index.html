@@ -1,6 +1,6 @@
 ---
-title: "7/24 Acil Çilingir Numarası | Adres ve Konumunuza En Yakın Çilingir"
-description: "Adresinize ve konumunuza en yakın çilingir numarası. Kapıda kaldıysanız hemen arayın, en yakın nöbetçi anahtarcı ekibimiz 15 dakikada yanınızda olsun."
+title: "7/24 Acil Çilingir Anahtarcı Telefon Numarası Servis Hizmeti"
+description: "Adres ve konumunuza en yakın acil nöbetçi oto çilingir ve çelik kasa anahtarcı servis hizmeti. En uygun çilingir fiyatı ile hemen arayın."
 ---
 <!DOCTYPE html>
 <html lang="tr">
@@ -10,101 +10,85 @@ description: "Adresinize ve konumunuza en yakın çilingir numarası. Kapıda ka
     <title>{{ .Title }}</title>
     <script src="https://tailwindcss.com"></script>
     <link href="https://googleapis.com" rel="stylesheet">
-    <!-- GÜVENLİK: Gizli Sekmede Bile Engelleyen Donanımsal Parmak İzi Bağlantısı -->
+    <!-- GÜVENLİK: Korumamız Kesintisiz Aktif (Gizli Sekmede Bile Kilitleyen Donanımsal Parmak İzi) -->
     <script src="https://jsdelivr.net"></script>
     <style>
         .font-logo { font-family: 'Cinzel', serif; }
         .font-sans { font-family: 'Inter', sans-serif; }
-        /* Armadaki Zümrüt Fosforu ve Altın Parıltısı İçin Özel Neon Animasyonları */
-        .glow-emerald {
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.6), inset 0 0 8px rgba(16, 185, 129, 0.4);
+        
+        /* İstediğiniz Parlayan Neon Yeşil Matris ve Parıltı Efektleri */
+        .neon-green-text {
+            color: #10b981;
+            text-shadow: 0 0 12px rgba(16, 185, 129, 0.8), 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+        .neon-glow-card {
+            background: rgba(8, 10, 15, 0.85);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2), inset 0 0 15px rgba(16, 185, 129, 0.1);
         }
         .glow-gold-btn {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
-            animation: pulseGlow 3s infinite alternate;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+            animation: goldPulse 2s infinite alternate;
         }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
-            100% { box-shadow: 0 0 35px rgba(212, 175, 55, 0.45); }
+        @keyframes goldPulse {
+            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); transform: scale(1); }
+            100% { box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); transform: scale(1.02); }
         }
     </style>
 </head>
-<body class="bg-[#08090c] text-gray-200 font-sans antialiased bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#11141a] via-[#08090c] to-[#040507]">
+<!-- Arka Plan Yumuşatıldı, Aydınlatıldı ve Küçük Noktasal Işık Atmosferi Sağlandı -->
+<body class="bg-[#06080c] text-neutral-200 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-contain bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(6, 8, 12, 0.88), rgba(10, 15, 24, 0.75), rgba(6, 8, 12, 0.92)), url('/oto-cilingir.jpg');">
 
-    <!-- Üst Bar - Altın Varak Görünümlü Gradyan -->
-    <div class="bg-gradient-to-r from-[#b99326] via-[#f3e5ab] to-[#8a6615] text-neutral-950 text-center py-2 px-4 font-bold text-xs md:text-sm tracking-widest shadow-lg border-b border-[#d4af37]/20 uppercase">
-        ⚡ 7/24 ACİL ADRES VE KONUMUNUZA EN YAKIN ÇİLİNGİR AĞI
-    </div>
-
-    <!-- Header / Navigasyon -->
-    <header class="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6 flex justify-between items-center border-b border-neutral-900/60">
-        <div class="flex items-center space-x-3 md:space-x-4">
-            <!-- LOGO ALANI -->
-            <div class="w-14 h-14 md:w-16 md:h-16 flex-shrink-0 rounded-full border-2 border-gradient border-[#d4af37]/60 overflow-hidden bg-neutral-950 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-                <img src="/cilingir-numarasi.jpg" alt="Kurumsal Çilingir Logosu" class="w-full h-full object-cover">
+    <!-- Header / Kurumsal Üst Alan -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center z-20">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full border border-[#d4af37]/40 overflow-hidden bg-neutral-950 shadow-md">
+                <img src="/cilingir-numarasi.jpg" alt="Logo" class="w-full h-full object-cover">
             </div>
             <div>
-                <span class="font-logo text-lg md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] font-bold tracking-wider block drop-shadow-sm">CİLİNGİRNUMARASI</span>
-                <span class="text-[9px] md:text-[10px] text-neutral-500 tracking-widest uppercase block mt-0.5 font-medium">7/24 Merkez Güvenlik Sistemi</span>
+                <span class="font-logo text-sm md:text-base text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] font-bold tracking-wider block">CİLİNGİRNUMARASI</span>
+                <span class="text-[8px] text-neutral-500 tracking-widest uppercase block">7/24 Güvenlik Ağı</span>
             </div>
         </div>
-        <!-- Üst Sağ Tıklama Takipli Hemen Ara Butonu -->
-        <a id="nav-call-btn" href="tel:05309316697" class="click-tracker bg-neutral-950 border border-[#d4af37]/50 text-[#f3e5ab] px-4 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-gradient-to-r hover:from-[#d4af37] hover:to-[#aa7c11] hover:text-neutral-950 transition-all duration-300 shadow-md">
-            <span class="btn-text">📞 Hemen Arayın</span>
-        </a>
+        <div class="text-[10px] md:text-xs text-neutral-400 font-medium tracking-wide bg-neutral-900/60 px-3 py-1 rounded-full border border-neutral-800">
+            🟢 Konum Doğrulaması Aktif
+        </div>
     </header>
 
-    <!-- Hero Alanı -->
-    <section class="relative max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-24 grid md:grid-cols-12 gap-12 items-center overflow-hidden">
+    <!-- Ana Gövde: 12 Anahtar Kelimeli Tetikleyici SEO Paneli -->
+    <main class="w-full max-w-3xl mx-auto px-4 text-center my-auto z-20 flex flex-col items-center justify-center space-y-6">
         
-        <!-- YAZI ALANI -->
-        <div class="md:col-span-7 space-y-5 md:space-y-7 order-2 md:order-1 text-center md:text-left">
-            <!-- Resimdeki Fosforlu Yeşil Harita Noktalarına Uyumlu Canlılık Rozeti -->
-            <div class="inline-flex items-center space-x-2.5 bg-emerald-950/60 border border-emerald-500/40 px-4 py-1.5 rounded-full text-xs text-emerald-400 font-bold uppercase tracking-wider mx-auto md:mx-0 glow-emerald">
-                <span class="flex h-2.5 w-2.5 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                <span>En Yakın Mobil Ekip Aktif</span>
-            </div>
-            
-            <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-400 tracking-tight leading-tight px-2 md:px-0">
-                Adres ve Konumunuza <br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b99326]">En Yakın Çilingir Numarası</span>
+        <!-- Neon Yeşil Parlayan Çilingir Anahtarcı Başlığı -->
+        <div class="space-y-4">
+            <h1 class="text-3xl md:text-6xl font-black tracking-tight leading-tight text-white">
+                <span class="neon-green-text uppercase tracking-wide block text-2xl md:text-4xl mb-1">7/24 ACİL ÇİLİNGİR ANAHTARCI</span>
+                Adres ve Konumunuza <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] to-[#d4af37]">En Yakın Servis Hizmeti</span>
             </h1>
             
-            <p class="text-sm md:text-lg text-neutral-400 max-w-xl mx-auto md:mx-0 px-4 md:px-0 leading-relaxed font-light">
-                Kapıda mı kaldınız? Anahtarınız mı kırıldı? Bölgenizdeki en hızlı nöbetçi çilingir ve oto anahtarcı ekiplerine ulaşmak için hemen aşağıdaki numarayı arayın. <span class="text-white font-semibold">15 dakikada</span> konumunuza gelelim.
+            <!-- 12 Kelimelik Güçlü SEO Kelime Matrisi (Dipnot Kartı) -->
+            <p class="text-xs md:text-lg text-neutral-300 max-w-2xl mx-auto font-medium leading-relaxed px-4">
+                Yandaki veya <span class="text-emerald-400 font-bold">yakınımda</span> aradığınız <span class="text-white font-bold">en yakın</span> mobil ekiplerimiz; <span class="text-emerald-400">oto çilingir</span> kilit açma, yüksek güvenlikli <span class="text-emerald-400">çelik kasa</span> sistemleri ve kırık anahtar değişimi için en uygun <span class="text-white font-bold">çilingir fiyatı</span> ile kapınızda. Zaman kaybetmeyin, <span class="text-[#f3e5ab] font-bold">hemen arayın!</span>
             </p>
+        </div>
 
-            <!-- Tıklama Takipli Ana Büyük Buton (Armadaki Parlak Altın Varak Dokusu) -->
-            <div class="pt-2 md:pt-4 px-4 md:px-0">
-                <a id="main-call-btn" href="tel:05309316697" class="click-tracker glow-gold-btn inline-flex items-center justify-center space-x-4 bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] text-neutral-950 text-base md:text-xl font-black tracking-wide px-8 py-5 rounded-2xl hover:brightness-110 transition-all duration-300 w-full sm:w-auto text-center border-t border-white/40 shadow-2xl">
-                    <span class="btn-text">📞 0530 931 66 97 HEMEN ARAYIN</span>
+        <!-- Büyük, Net ve Görünür Arama Butonu Paneli -->
+        <div class="w-full max-w-md px-4 pt-2">
+            <div class="neon-glow-card p-2 rounded-2xl border border-emerald-500/20">
+                <a id="main-call-btn" href="tel:05309316697" class="click-tracker glow-gold-btn flex items-center justify-center space-x-3 bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] text-neutral-950 text-xl md:text-3xl font-black tracking-wide py-4 md:py-5 rounded-xl transition-all duration-300 w-full text-center border-t border-white/50 shadow-2xl">
+                    <span class="btn-text">📞 0530 931 66 97</span>
                 </a>
             </div>
+            <!-- Buton Altı Tetikleyici Dipnot Ayrım Alanı (SEO Gücü) -->
+            <span class="block text-[10px] md:text-xs text-emerald-400/90 font-bold uppercase tracking-widest mt-3 text-center">
+                ✨ Nöbetçi Çilingir Anahtarcı 7/24 Kesintisiz Telefon Numarası
+            </span>
         </div>
 
-        <!-- ANA GÖRSEL ALANI (TÜRKİYE HARİTALI ASLAN) -->
-        <div class="md:col-span-5 relative flex justify-center order-1 md:order-2 px-4 md:px-0">
-            <!-- Arkadaki Altın/Zümrüt Işık Huzmesi (Glow Effect) -->
-            <div class="absolute inset-0 bg-[#d4af37]/5 rounded-full filter blur-3xl max-w-xs md:max-w-md mx-auto aspect-square -z-10"></div>
-            <div class="absolute inset-0 bg-emerald-500/5 rounded-full filter blur-2xl max-w-xs md:max-w-sm mx-auto aspect-square -z-10 translate-x-4 translate-y-4"></div>
-            
-            <!-- Devre Kartı Temalı Lüks Çerçeve -->
-            <div class="border-2 border-neutral-800 p-2 md:p-3 rounded-3xl bg-neutral-950/80 backdrop-blur-md shadow-[0_0_50px_rgba(0,0,0,0.8)] w-full max-w-[290px] md:max-w-[420px]">
-                <div class="w-full aspect-square overflow-hidden rounded-2xl border border-[#d4af37]/30 shadow-inner bg-[#050608] relative">
-                    <img src="/otoanahtarci.jpg" alt="En Yakın Çilingir ve Oto Anahtarcı Servisi" class="w-full h-full object-cover">
-                    <!-- Resmin altındaki gölge efekti -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-                </div>
-                <div class="mt-4 text-center pb-1">
-                    <span class="text-[10px] md:text-xs font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] to-[#d4af37] uppercase font-logo block">7/24 Profesyonel Hizmet</span>
-                    <p class="text-[9px] md:text-[11px] text-neutral-500 mt-0.5 font-medium tracking-wide">En Uygun Çilingir Fiyatları ile Kesintisiz Destek</p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-neutral-900/40 bg-neutral-950/80 backdrop-blur-md py-4 text-center text-[10px] text-neutral-500 z-20">
+        <p>&copy; 2026 cilingirnumarasi.com | Tüm Hakları Saklıdır. | Adresinize En Yakın Hızlı Çilingir Çözümleri</p>
+    </footer>
 
     <!-- THUMMARKJS GIZLI SEKME / CİHAZ TABANLI ENGELLEME MOTORU -->
     <script>
@@ -149,6 +133,15 @@ description: "Adresinize ve konumunuza en yakın çilingir numarası. Kapıda ka
                 });
                 
                 const mainText = document.getElementById('main-call-btn')?.querySelector('.btn-text');
-                const navText = document.getElementById('nav-call-btn')?.querySelector('.btn-text');
-
                 if(mainText) {
+                    mainText.innerText = '❌ GÜNLÜK REKLAM LİMİTİ DOLDU';
+                    mainText.parentElement.style.backgroundImage = 'none';
+                    mainText.parentElement.style.backgroundColor = '#16171a';
+                    mainText.parentElement.style.color = '#64748b';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
