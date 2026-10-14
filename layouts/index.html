@@ -1,122 +1,45 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Çilingir Anahtarcı - Yüksek Güvenlikli Kilit Oto Anahtar</title>
+---
+layout: default
+---
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&family=Inter:wght@800;900&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#020617;color:#fff;font-family:'Inter';overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:9999;height:72px;background:rgba(2,6,23,0.96);backdrop-filter:blur(24px);border-bottom:1.5px solid rgba(255,215,0,0.3);display:flex;justify-content:space-between;align-items:center;padding:0 20px}
-nav .brand{display:flex;align-items:center;gap:12px}
-nav .brand img{width:50px;height:50px;border-radius:13px;background:#fff;padding:3px;box-shadow:0 0 0 2px #FFD700,0 0 25px #FFD700}
-nav .brand b{font-family:'Cinzel';font-weight:900;font-size:12px;color:#FFD700;display:block;line-height:1.1}
-nav .menu{display:flex;gap:20px}
-nav .menu a{color:#8b95a5;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.5px}
-nav .menu a:hover{color:#FFD700}
-.hero{width:100vw;height:100svh;min-height:800px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px;background:#020617}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.25) contrast(1.2)}
-.hero .grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,6,23,0.15) 0%,rgba(2,6,23,0.7) 75%,#020617 100%)}
-.hero .wrap{position:relative;z-index:2;text-align:center;padding:24px;max-width:1000px}
-.badge{display:inline-block;background:rgba(0,255,157,0.15);border:1px solid #00ff9d;color:#00ff9d;padding:10px 22px;border-radius:100px;font-size:11px;font-weight:900;letter-spacing:2px;margin-bottom:18px}
-.hero h1{font-family:'Cinzel';font-weight:900;font-size:clamp(34px,7vw,68px);line-height:0.95;color:#FFD700;text-shadow:0 0 25px rgba(255,215,0,0.8),0 5px 0 #000}
-.hero .alt{margin:18px 0 28px;color:#cbd5e1;font-size:15px;font-weight:700}
+body{background:#020617;color:#fff;font-family:Inter;overflow:hidden;margin:0}
+nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(2,6,23,.96);border-bottom:1.5px solid rgba(255,215,0,.3);display:flex;justify-content:space-between;align-items:center;padding:0 20px;z-index:9999}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:50px;height:50px;border-radius:13px;background:#fff;padding:3px;box-shadow:0 0 2px #FFD700,0 0 25px #FFD700}
+.brand b{font-family:Cinzel;font-weight:900;font-size:12px;color:#FFD700;line-height:1.1}
+.menu{display:flex;gap:20px}.menu a{color:#8b95a5;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.5px}
+.hero{width:100vw;height:100svh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px;background:#020617}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.25) contrast(1.2)}
+.grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,6,23,.15) 0%,rgba(2,6,23,.7) 75%,#020617 100%)}
+.wrap{position:relative;z-index:2;text-align:center;padding:24px;max-width:1000px}
+.badge{display:inline-block;background:rgba(0,255,157,.15);border:1px solid #00ff9d;color:#00ff9d;padding:10px 22px;border-radius:100px;font-size:11px;font-weight:900;letter-spacing:2px;margin-bottom:18px}
+.hero h1{font-family:Cinzel;font-weight:900;font-size:clamp(34px,7vw,68px);line-height:.95;color:#FFD700;text-shadow:0 0 25px rgba(255,215,0,.8),0 5px #000}
+.alt{margin:18px 0 28px;color:#cbd5e1;font-size:15px;font-weight:700}
 .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn{padding:20px 36px;background:#0a0a0a;border:2px solid #FFD700;border-radius:100px;font-family:'Cinzel';font-weight:900;font-size:16px;text-decoration:none;color:#FFD700!important;box-shadow:0 0 20px rgba(255,215,0,0.4);transition:0.3s}
+.btn{padding:20px 36px;background:#0a0a0a;border:2px solid #FFD700;border-radius:100px;font-family:Cinzel;font-weight:900;font-size:16px;text-decoration:none;color:#FFD700!important;box-shadow:0 0 20px rgba(255,215,0,.4);transition:.3s}
 .btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 0 35px #FFD700}
-.btn.green{border-color:#00ff9d;color:#00ff9d!important;box-shadow:0 0 20px rgba(0,255,157,0.4)}
-section{padding:70px 20px;max-width:1150px;margin:0 auto}
-section h2{font-family:'Cinzel';font-weight:900;font-size:26px;color:#FFD700;border-left:5px solid #FFD700;padding-left:14px;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.box{background:linear-gradient(145deg,#0f1c4d,#060f2c);border:1px solid rgba(255,215,0,0.18);border-radius:18px;padding:20px}
-.box h3{color:#FFD700;font-family:'Cinzel';font-size:14px;margin-bottom:6px}
-.box p{color:#cbd5e1;font-size:13px}
-#thunbork-shield{display:none!important}
+.btn.green{border-color:#00ff9d;color:#00ff9d!important;box-shadow:0 0 20px rgba(0,255,157,.4)}
+#thunbork{display:none!important}
 </style>
-</head>
-<body>
 
-<nav>
-<div class="brand"><img src="/cilingir-anahtarci-numarasi.jpg" alt="logo"><b>ÇİLİNGİR<br>ANAHTARCI</b></div>
-<div class="menu">
-<a href="#ANASAYFA">ANA SAYFA</a>
-<a href="#HAKKIMIZDA">HAKKIMIZDA</a>
-<a href="#HIZMETLER">HİZMETLERİMİZ</a>
-<a href="#ILETISIM">İLETİŞİM</a>
-</div>
-</nav>
+<nav><div class="brand"><img src="/cilingir-anahtarci-numarasi.jpg"><b>ÇİLİNGİR<br>NUMARASI</b></div><div class="menu"><a>ANA SAYFA</a><a>HAKKIMIZDA</a><a>HİZMETLERİMİZ</a><a>İLETİŞİM</a></div></nav>
 
-<div id="ANASAYFA" class="hero">
-<img class="bg" src="/ana-gorsel.jpg" alt="Çilingir Anahtarcı">
+<div class="hero">
+<img class="bg" src="/ana-gorsel.jpg">
 <div class="grad"></div>
 <div class="wrap">
-<div id="cityBadge" class="badge">📍 KONUM ALGILANIYOR</div>
-<h1 id="cityTitle">ÇİLİNGİR<br>ANAHTARCI</h1>
-<div id="cityAlt" class="alt">Yüksek Güvenlikli Kilit • Oto Anahtar • 15 DK • 7/24</div>
+<div class="badge">81 İL 973 İLÇE 32.000 MAHALLE - 15 DK - 7/24</div>
+<h1>ÇİLİNGİR<br>NUMARASI</h1>
+<div class="alt">Yüksek Güvenlikli Kilit • Oto Anahtar • Hasarsız Açma • cilingirnumarasi.com</div>
 <div class="btns">
 <a class="btn" href="tel:+905309316697">✦ 0530 931 66 97 ✦</a>
-<a class="btn green" href="https://wa.me/905309316697">WhatsApp</a>
+<a class="btn green" href="https://wa.me/905309316697">WhatsApp Konum At</a>
 </div>
 </div>
 </div>
-
-<section id="HAKKIMIZDA"><h2>HAKKIMIZDA</h2><p id="aboutP" style="color:#94a3b8;line-height:1.8">15 yıllık usta tecrübesi ile bulunduğunuz bölgede hizmet veriyoruz.</p></section>
-<section id="HIZMETLER"><h2>HİZMETLERİMİZ</h2><div class="grid"><div class="box"><h3>🔑 ÇİLİNGİR</h3><p>Hasarsız kapı açma</p></div><div class="box"><h3>🗝️ ANAHTARCI</h3><p>Anahtar kopyalama</p></div><div class="box"><h3>🛡️ YÜKSEK GÜVENLİKLİ KİLİT</h3><p>Kale Mul-T-Lock</p></div><div class="box"><h3>🚗 OTO ANAHTAR</h3><p>Oto çilingir</p></div></div></section>
-<section id="ILETISIM"><h2>İLETİŞİM</h2><p style="font-size:22px;color:#FFD700;font-weight:900">0530 931 66 97 - 7/24</p></section>
-
-<div id="thunbork-shield"></div>
-
+<div id="thunbork"></div>
 <script>
-// THUNBORK GİZLİ 3 TIK - DÜZELTİLDİ
-(function(){
-  const KEY = "thunbork_cilingir_v2";
-  const LIMIT = 3;
-  const TODAY = new Date().toISOString().slice(0,10);
-  function getData(){
-    try{
-      const d = JSON.parse(localStorage.getItem(KEY) || "{}");
-      if(d.date !== TODAY) return {date: TODAY, count: 0};
-      return d;
-    }catch(e){ return {date: TODAY, count: 0}; }
-  }
-  function saveData(d){ localStorage.setItem(KEY, JSON.stringify(d)); }
-  document.addEventListener("DOMContentLoaded", function(){
-    const links = document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]');
-    links.forEach(function(a){
-      a.addEventListener("click", function(e){
-        const data = getData();
-        if(data.count >= LIMIT){ e.preventDefault(); return false; }
-        data.count += 1;
-        saveData(data);
-      });
-    });
-  });
-})();
-
-// ŞEHİR ALGILAMA - 81 İL UYUMLU
-(function(){
-  async function detect(){
-    let city = "BÖLGENİZ";
-    try{
-      const res = await fetch("https://ipapi.co/json/");
-      const json = await res.json();
-      if(json.city) city = json.city.toUpperCase();
-    }catch(err){}
-    const badge = document.getElementById("cityBadge");
-    const title = document.getElementById("cityTitle");
-    const alt = document.getElementById("cityAlt");
-    const about = document.getElementById("aboutP");
-    if(badge) badge.textContent = "📍 " + city + " - MAHALLENİZDE USTA VAR - 15 DK";
-    if(title) title.innerHTML = city + "<br>ÇİLİNGİR ANAHTARCI";
-    if(alt) alt.textContent = city + " Yüksek Güvenlikli Kilit • Oto Anahtar • 15 DK";
-    if(about) about.textContent = "15 yıllık usta tecrübesi ile " + city + " bölgesinde Çilingir Anahtarcı Yüksek Güvenlikli Kilit Oto Anahtar hizmeti veriyoruz. " + city + " mahallenizin ustası gibi 15 dk'da kapınızda.";
-    document.title = city + " Çilingir Anahtarcı - 0530 931 66 97";
-  }
-  detect();
-})();
+const K="thunbork_final";const L=3;const T=new Date().toISOString().slice(0,10);
+function g(){try{const d=JSON.parse(localStorage.getItem(K)||"{}");return d.date!==T?{date:T,count:0}:d}catch{return{date:T,count:0}}}
+function s(d){localStorage.setItem(K,JSON.stringify(d))}
+document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"]').forEach(a=>a.addEventListener("click",e=>{let d=g();if(d.count>=L){e.preventDefault();return false}d.count++;s(d)}));
 </script>
-
-</body>
-</html>
