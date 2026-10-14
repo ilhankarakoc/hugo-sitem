@@ -35,13 +35,14 @@ description: "Adres ve konumunuza en yakın acil nöbetçi oto çilingir ve çel
         }
     </style>
 </head>
-<!-- Arka Plan Yumuşatıldı, Aydınlatıldı ve Küçük Noktasal Işık Atmosferi Sağlandı -->
+<!-- ARKA PLAN RESMİ TAM İSTEDİĞİNİZ GİBİ oto-cilingir.jpg OLARAK AYARLANDI -->
 <body class="bg-[#06080c] text-neutral-200 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-contain bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(6, 8, 12, 0.88), rgba(10, 15, 24, 0.75), rgba(6, 8, 12, 0.92)), url('/oto-cilingir.jpg');">
 
-    <!-- Header / Kurumsal Üst Alan -->
+    <!-- Header -->
     <header class="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center z-20">
         <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-full border border-[#d4af37]/40 overflow-hidden bg-neutral-950 shadow-md">
+                <!-- LOGO RESMİ TAM İSTEDİĞİNİZ GİBİ cilingir-numarasi.jpg OLARAK AYARLANDI -->
                 <img src="/cilingir-numarasi.jpg" alt="Logo" class="w-full h-full object-cover">
             </div>
             <div>
@@ -54,40 +55,32 @@ description: "Adres ve konumunuza en yakın acil nöbetçi oto çilingir ve çel
         </div>
     </header>
 
-    <!-- Ana Gövde: 12 Anahtar Kelimeli Tetikleyici SEO Paneli -->
+    <!-- Ana Gövde: 12 Anahtar Kelimeli SEO Paneli -->
     <main class="w-full max-w-3xl mx-auto px-4 text-center my-auto z-20 flex flex-col items-center justify-center space-y-6">
-        
-        <!-- Neon Yeşil Parlayan Çilingir Anahtarcı Başlığı -->
         <div class="space-y-4">
             <h1 class="text-3xl md:text-6xl font-black tracking-tight leading-tight text-white">
                 <span class="neon-green-text uppercase tracking-wide block text-2xl md:text-4xl mb-1">7/24 ACİL ÇİLİNGİR ANAHTARCI</span>
                 Adres ve Konumunuza <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e5ab] to-[#d4af37]">En Yakın Servis Hizmeti</span>
             </h1>
-            
-            <!-- 12 Kelimelik Güçlü SEO Kelime Matrisi (Dipnot Kartı) -->
             <p class="text-xs md:text-lg text-neutral-300 max-w-2xl mx-auto font-medium leading-relaxed px-4">
                 Yandaki veya <span class="text-emerald-400 font-bold">yakınımda</span> aradığınız <span class="text-white font-bold">en yakın</span> mobil ekiplerimiz; <span class="text-emerald-400">oto çilingir</span> kilit açma, yüksek güvenlikli <span class="text-emerald-400">çelik kasa</span> sistemleri ve kırık anahtar değişimi için en uygun <span class="text-white font-bold">çilingir fiyatı</span> ile kapınızda. Zaman kaybetmeyin, <span class="text-[#f3e5ab] font-bold">hemen arayın!</span>
             </p>
         </div>
 
-        <!-- Büyük, Net ve Görünür Arama Butonu Paneli -->
         <div class="w-full max-w-md px-4 pt-2">
             <div class="neon-glow-card p-2 rounded-2xl border border-emerald-500/20">
                 <a id="main-call-btn" href="tel:05309316697" class="click-tracker glow-gold-btn flex items-center justify-center space-x-3 bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] text-neutral-950 text-xl md:text-3xl font-black tracking-wide py-4 md:py-5 rounded-xl transition-all duration-300 w-full text-center border-t border-white/50 shadow-2xl">
                     <span class="btn-text">📞 0530 931 66 97</span>
                 </a>
             </div>
-            <!-- Buton Altı Tetikleyici Dipnot Ayrım Alanı (SEO Gücü) -->
             <span class="block text-[10px] md:text-xs text-emerald-400/90 font-bold uppercase tracking-widest mt-3 text-center">
                 ✨ Nöbetçi Çilingir Anahtarcı 7/24 Kesintisiz Telefon Numarası
             </span>
         </div>
-
     </main>
 
-    <!-- Footer -->
     <footer class="w-full border-t border-neutral-900/40 bg-neutral-950/80 backdrop-blur-md py-4 text-center text-[10px] text-neutral-500 z-20">
-        <p>&copy; 2026 cilingirnumarasi.com | Tüm Hakları Saklıdır. | Adresinize En Yakın Hızlı Çilingir Çözümleri</p>
+        <p>&copy; 2026 cilingirnumarasi.com | Tüm Hakları Saklıdır.</p>
     </footer>
 
     <!-- THUMMARKJS GIZLI SEKME / CİHAZ TABANLI ENGELLEME MOTORU -->
@@ -111,14 +104,13 @@ description: "Adres ve konumunuza en yakın acil nöbetçi oto çilingir ve çel
                             e.preventDefault();
                             return false;
                         }
-
                         currentClicks++;
                         localStorage.setItem(storageKey, currentClicks);
 
                         if (currentClicks >= maxAllowedClicks) {
                             e.preventDefault();
                             applyHardwareAntiFraud();
-                            alert("Günlük arama limitine ulaştınız. Güvenlik nedeniyle numara yönlendirmesi kilitlenmiştir.");
+                            alert("Günlük arama limitine ulaştınız. Güvenlik nedeniyle numara kilitlenmiştir.");
                         }
                     });
                 });
@@ -131,17 +123,10 @@ description: "Adres ve konumunuza en yakın acil nöbetçi oto çilingir ve çel
                     btn.style.filter = 'grayscale(100%)';
                     btn.style.cursor = 'not-allowed';
                 });
-                
                 const mainText = document.getElementById('main-call-btn')?.querySelector('.btn-text');
-                if(mainText) {
-                    mainText.innerText = '❌ GÜNLÜK REKLAM LİMİTİ DOLDU';
-                    mainText.parentElement.style.backgroundImage = 'none';
-                    mainText.parentElement.style.backgroundColor = '#16171a';
-                    mainText.parentElement.style.color = '#64748b';
-                }
+                if(mainText) mainText.innerText = '❌ GÜNLÜK REKLAM LİMİTİ DOLDU';
             }
         });
     </script>
-
 </body>
-</html> 
+</html>
