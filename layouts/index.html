@@ -3,52 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adana Çilingir Numarası 7/24</title>
+<title>cilingirnumarasi.com</title>
 <style>
-html,body{margin:0;padding:0;background:#060f2c;color:#fff;font-family:Arial;overflow:auto!important;height:auto!important}
-.top{background:#000;display:flex;align-items:center;gap:10px;padding:10px}
-.top img{width:45px;height:45px;object-fit:contain;border-radius:8px}
-.top b{color:gold;font-size:14px}
-.hero{padding:10px}
-.hero img{width:100%;height:auto;display:block;border-radius:16px;max-width:900px;margin:auto}
-.btns{padding:20px 10px 30px;text-align:center}
-.btn{display:block;width:94%;max-width:360px;margin:12px auto;padding:18px;background:gold;color:#000;border-radius:99px;font-weight:900;font-size:20px;text-decoration:none}
-.btn.wa{background:#25D366;color:#fff}
-.kalakan{background:#111;border:1px solid #333;color:#0f0;text-align:center;padding:8px;font-size:12px;font-weight:700;letter-spacing:1px}
-.shield{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;background:#0a0a0a;padding:6px;font-size:11px;color:#aaa}
-footer{text-align:center;padding:15px;color:#666;font-size:10px}
-#kvkk{position:fixed;bottom:0;left:0;right:0;background:#000000e6;color:#fff;padding:12px;font-size:12px;z-index:9999;border-top:2px solid gold}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;width:100%;min-height:100vh;display:flex;justify-content:center;overflow-x:hidden}
+.site{width:100%;max-width:480px;background:#060f2c;min-height:100vh;box-shadow:0 0 40px #000;display:flex;flex-direction:column}
+.top{background:#000!important;display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:2px solid #FFD700}
+.top img{width:52px;height:52px;min-width:52px;object-fit:contain;border-radius:10px;background:#fff;padding:2px}
+.top-text{color:#FFD700!important;font-size:14px;font-weight:900;line-height:1.3}
+.hero{width:100%;background:#060f2c;display:flex;justify-content:center;align-items:center;padding:0;line-height:0}
+.hero img{width:100%!important;max-width:100%!important;height:auto!important;min-height:320px;object-fit:contain!important;object-position:center top;display:block}
+.kalkan{background:#000;border:2px solid #0f0;border-left:0;border-right:0;padding:8px;text-align:center}
+.kalkan-ust{color:#ff0000;font-weight:900;font-size:13px;animation:blink 1s infinite}
+.kalkan-alt{color:#0f0;font-weight:900;font-size:11px;margin-top:4px}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0.3}}
+.thunbork-bar{background:#111;color:#FFD700;text-align:center;padding:6px;font-size:11px}
+.btns{padding:16px 12px;background:#060f2c}
+.btn{display:block;width:92%;max-width:360px;margin:12px auto;padding:16px;background:#FFD700;color:#000!important;border-radius:50px;font-weight:900;font-size:19px;text-align:center;text-decoration:none}
+.btn.wa{background:#25D366;color:#fff!important}
+.footer{background:#000;padding:10px;text-align:center;font-size:10px;color:#555}
 </style>
 </head>
-<body oncontextmenu="return false">
+<body>
+<div class="site">
+<div id="thunborkInfo" class="thunbork-bar">🔒 thunbork.js Aktif</div>
+
 <div class="top">
-<img src="/cilingir-anahtarci-numarasi.jpg">
-<b>7/24 ÇİLİNGİR 0530 931 66 97</b>
+<img src="/cilingir-anahtarci-numarasi.jpg" onerror="this.src='/ana-gorsel.jpg'">
+<div class="top-text">7/24 ÇİLİNGİR<br>0530 931 66 97<br>cilingirnumarasi.com</div>
 </div>
+
 <div class="hero">
-<img src="/ana-gorsel.jpg">
+<img src="/ana-gorsel.jpg" alt="Türkiye Haritası Aslanlı Çilingir Numarası" onerror="this.src='/cilingir-anahtarci-numarasi.jpg'">
 </div>
+
+<div class="kalkan">
+<div class="kalkan-ust">🚨 SİBER SALDIRI TESPİT EDİLDİ! 🚨</div>
+<div class="kalkan-alt">🛡️ DDOS VPN PROXY UÇAK MODU KORUMA KALKANI AKTİF 🛡️</div>
+</div>
+
 <div class="btns">
 <a class="btn" href="tel:+905309316697">📞 HEMEN ARA</a>
 <a class="btn wa" href="https://wa.me/905309316697">WhatsApp</a>
 </div>
 
-<footer>
-<div class="kalakan">🛡️ DDOS VPN PROXY UÇAK MODU KORUMA KALKANI AKTİF 🛡️</div>
-<div class="shield">
-<span>DDOS: AKTİF</span><span>VPN: AKTİF</span><span>PROXY: AKTİF</span><span>UÇAK MODU: AKTİF</span>
+<div class="footer">cilingirnumarasi.com</div>
 </div>
-<div style="color:#444;font-size:10px;margin-top:10px;">© 2026 cilingirnumarasi.com</div>
-</footer>
-
-<div id="kvkk"><p><b>🔒 KVKK:</b> Sahte tıklama ve bot önleme için cihaz analizi yapılmaktadır. <button onclick="this.parentElement.parentElement.style.display='none';localStorage.setItem('kvkk_ok','1')">ANLADIM</button></p></div>
-<div id="toast"></div>
 
 <script>
-// Scroll'u BOZMAYAN hafif koruma
-document.addEventListener('contextmenu',e=>e.preventDefault());
-if(localStorage.getItem('kvkk_ok')) document.getElementById('kvkk').style.display='none';
-function showToast(t){let el=document.getElementById('toast');el.innerText=t;el.style.display='block';setTimeout(()=>el.style.display='none',2000)}
+(function(){
+  const KEY="thunbork_cilingir"; const LIMIT=3; const today=new Date().toISOString().slice(0,10);
+  function getData(){try{let d=JSON.parse(localStorage.getItem(KEY)||"{}"); if(d.date!==today){d={date:today,count:0};} return d;}catch(e){return {date:today,count:0};}}
+  function saveData(d){localStorage.setItem(KEY, JSON.stringify(d));}
+  function updateBar(){let d=getData(); let el=document.getElementById("thunborkInfo"); if(el) el.innerHTML="🔒 thunbork.js | Kalan: <b style='color:#0f0'>"+(LIMIT-d.count)+"/"+LIMIT+"</b> | "+today;}
+  function block(e){let d=getData(); if(d.count>=LIMIT){e.preventDefault(); alert("🚨 GÜNLÜK 3 HAK DOLDU!\nYarın tekrar deneyin.\n0530 931 66 97"); document.body.innerHTML='<div style="background:#000;color:#0f0;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;font-family:Arial"><div style="font-size:60px">🛡️</div><h1 style="color:red">ENGELLENDİ</h1><p>Günlük 3 hak doldu</p></div>'; return false;} d.count++; saveData(d); updateBar();}
+  document.addEventListener("DOMContentLoaded", function(){updateBar(); document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"]').forEach(a=>{a.addEventListener("click", block);}); document.addEventListener("contextmenu", e=>e.preventDefault());});
+})();
 </script>
 </body>
 </html>
