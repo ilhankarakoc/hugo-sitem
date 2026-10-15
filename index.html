@@ -3,54 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oto Çilingir - cilingirnumarasi.com</title>
+    <title>Çilingir Numarası - cilingirnumarasi.com</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcss.com"></script>
     <style>
-        .neon-glow-card {
-            background: rgba(8, 10, 15, 0.85);
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2), inset 0 0 15px rgba(16, 185, 129, 0.1);
+        /* Tam İstediğiniz Siber Yeşil Neon Efektleri */
+        .neon-green-text {
+            color: #10b981;
+            text-shadow: 0 0 5px #10b981, 0 0 10px #10b981, 0 0 20px #047857;
+            font-family: monospace;
         }
 
-        .glow-gold-btn {
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
-            animation: goldPulse 2s infinite alternate;
+        .neon-green-card {
+            background: rgba(4, 10, 15, 0.85);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
         }
 
-        @keyframes goldPulse {
+        .glow-green-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            animation: greenPulse 2s infinite alternate;
+        }
+
+        @keyframes greenPulse {
             0% {
-                box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+                box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
                 transform: scale(1);
             }
             100% {
-                box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
-                transform: scale(1.02);
+                box-shadow: 0 0 35px rgba(16, 185, 129, 0.8);
+                transform: scale(1.03);
             }
         }
     </style>
 </head>
 
-<body class="bg-[#0b0d0c] text-neutral-200 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-contain bg-center bg-no-repeat" style="background-image: url('/static/oto-cilingir.jpg');">
+<!-- Arka plan resmi hem mobil hem web ekranına göre kendini otomatik ayarlar -->
+<body class="bg-[#020617] text-neutral-100 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-cover bg-center bg-no-repeat attachment-fixed" style="background-image: url('/static/site-on-yuz.png');">
 
-    <!-- Header -->
-    <header class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center z-20">
+    <!-- Arka planın üzerine hafif karartma atarak yazıların okunmasını kolaylaştırır -->
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+    <!-- Üst Bilgi (Header) - Mobil ve Web Uyumlu -->
+    <header class="w-full max-w-7xl mx-auto px-4 py-4 md:py-6 flex flex-col sm:flex-row justify-between items-center z-20 gap-4">
         <div class="flex items-center space-x-3">
-            <!-- LOGO RESMİ TAM İSTEDİĞİNİZ GİBİ STATIC İÇİNDEN ÇAĞRILDI -->
-            <div class="w-10 h-10 rounded-full border border-[#dafa57]/40 overflow-hidden bg-neutral-950 shadow-md">
-                <img src="/static/cilingir-numarasi.jpg" alt="Logo" class="w-full h-full object-cover">
+            <!-- Düzelttiğimiz Aslanlı Logo -->
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-[#10b981]/60 overflow-hidden bg-neutral-900 shadow-lg">
+                <img src="/static/logo.png" alt="Çilingir Numarası Logo" class="w-full h-full object-cover">
             </div>
-            <span class="font-logo text-sm md:text-base font-text-transparent bg-clip-text bg-gradient-to-r from-[#fa3e5a] via-[#dafa57] to-[#aa3721]">
-                <span class="text-[8px] text-neutral-500 tracking-widest uppercase block">7/24 Güvenlik Ağı</span>
-                cilingirnumarasi.com
-            </span>
+            <div class="flex flex-col">
+                <!-- Haritadaki yeşil yazı konsepti -->
+                <span class="neon-green-text text-[10px] md:text-xs tracking-widest uppercase block font-bold">
+                    81 İL 973 İLÇE 32.000 MAHALLE - 15 DK - 7/24
+                </span>
+                <span class="font-bold text-lg md:text-2xl text-white tracking-tight">
+                    cilingirnumarasi.com
+                </span>
+            </div>
         </div>
     </header>
 
-    <!-- Ana İçerik Alanı (Gerekiyorsa buraya eklenebilir) -->
-    <main class="flex-grow flex items-center justify-center p-4">
-        <!-- İhtiyacınıza göre butonları veya kartları bu kısma yerleştirebilirsiniz -->
+    <!-- Ana İçerik Alanı - Mobilde ezilmeyi önleyen esnek yapı -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4 z-20 text-center my-auto">
+        <!-- Yeşil Siber Neon Kart -->
+        <div class="neon-green-card p-6 md:p-8 rounded-2xl max-w-md w-full space-y-5">
+            <h1 class="text-xl md:text-3xl font-black text-white tracking-wide">
+                TÜRKİYE GENELİ <br>
+                <span class="text-[#10b981]">OTO ÇİLİNGİR</span>
+            </h1>
+            
+            <p class="text-xs md:text-sm text-neutral-300 leading-relaxed">
+                Haritadaki siber ağımızla en yakın usta 15 dakikada yanınızda. Güvenli hizmet için hemen bağlanın.
+            </p>
+            
+            <!-- Tıklanınca Doğrudan Arayan Yeşil Neon Buton -->
+            <a href="tel:05309316697" class="glow-green-btn text-neutral-950 font-black text-lg md:text-xl py-4 px-6 rounded-xl block transition-all duration-300 transform tracking-wider">
+                📞 0530 931 66 97
+            </a>
+            
+            <!-- WhatsApp Hızlı Bağlantı -->
+            <a href="https://wa.me" target="_blank" class="block text-xs md:text-sm text-neutral-400 hover:text-[#10b981] transition-colors duration-200">
+                💬 WhatsApp Konum At
+            </a>
+        </div>
     </main>
 
-    <!-- Footer Alanı (Gerekiyorsa buraya eklenebilir) -->
-    <footer class="w-full text-center py-4 text-xs text-neutral-500">
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="w-full text-center py-4 text-[10px] md:text-xs text-neutral-500 z-20 bg-neutral-950/60 backdrop-blur-sm">
         &copy; 2026 cilingirnumarasi.com. Tüm Hakları Saklıdır.
     </footer>
 
