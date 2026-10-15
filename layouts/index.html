@@ -5,240 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Çilingir Numarası - cilingirnumarasi.com</title>
     <style>
-        /* Tüm tarayıcı boşluklarını kesin olarak sıfırlıyoruz */
-        * {
-            margin: 0 !important;
-            padding: 0 !important;
-            box-sizing: border-box !important;
-        }
-
-        body, html {
-            width: 100% !important;
-            height: 100% !important;
-            min-height: 100vh !important;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-            background-color: #030712 !important;
-            overflow-x: hidden !important;
-        }
-
-        /* Arka plan resmini hem mobilde hem webde tam ekran kaplayan ana kapsayıcı */
+        * { margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; }
+        body, html { width: 100% !important; height: 100% !important; min-height: 100vh !important; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important; background-color: #030712 !important; overflow-x: hidden !important; }
+        
+        /* Arka plan resmini tam ekran kaplayan siber kapsayıcı */
         .cyber-bg-wrapper {
-            min-height: 100vh !important;
-            width: 100% !important;
+            min-height: 100vh !important; width: 100% !important;
             background-image: url('/oto-cilingir.jpg'), url('oto-cilingir.jpg'), url('/static/oto-cilingir.jpg') !important;
-            background-size: cover !important; /* Resmi bozmadan tam ekran genişletir */
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: fixed !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            position: relative !important;
+            background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; background-attachment: fixed !important;
+            display: flex !important; flex-direction: column !important; justify-content: space-between !important; position: relative !important;
         }
 
-        /* 💡 ÜST MENÜ: Yazıların beyazda kaybolmasını önleyen siber karartılmış şerit */
+        /* Üst Menü: Yazıların beyazda kaybolmasını önleyen siber karartılmış şerit */
         .cyber-header {
-            width: 100% !important;
-            background: rgba(3, 7, 18, 0.85) !important; /* Arkadaki altın şeridin yazıyı yutmasını engeller */
-            border-bottom: 1px solid rgba(16, 185, 129, 0.3) !important;
-            padding: 15px 20px !important;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            z-index: 9999 !important;
-            backdrop-filter: blur(5px) !important;
+            width: 100% !important; background: rgba(3, 7, 18, 0.92) !important; border-bottom: 1px solid rgba(16, 185, 129, 0.4) !important;
+            padding: 15px 25px !important; display: flex !important; justify-content: space-between !important; align-items: center !important; z-index: 99999 !important; backdrop-filter: blur(5px) !important;
         }
-
-        .logo-box {
-            display: flex !important;
-            align-items: center !important;
-            gap: 12px !important;
-        }
-
-        .logo-img {
-            width: 48px !important;
-            height: 48px !important;
-            border-radius: 50% !important;
-            border: 2px solid #10b981 !important;
-            overflow: hidden !important;
-            background: #020617 !important;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5) !important;
-        }
-
-        .logo-img img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-        }
-
-        .site-brand {
-            color: #ffffff !important;
-            font-size: 20px !important;
-            font-weight: 900 !important;
-            letter-spacing: -0.5px !important;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;
-        }
-
-        .cyber-nav {
-            display: flex !important;
-            gap: 20px !important;
-        }
-
-        .cyber-nav-link {
-            color: #ffffff !important; /* Net beyaz okunuş */
-            text-decoration: none !important;
-            font-weight: 900 !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-            transition: all 0.25s ease !important;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.9) !important;
-        }
-
-        .cyber-nav-link:hover, .cyber-nav-link:active {
-            color: #10b981 !important;
-            text-shadow: 0 0 12px #10b981 !important;
-        }
+        .logo-box { display: flex !important; align-items: center !important; justify-content: flex-start !important; gap: 12px !important; }
+        .logo-img { width: 55px !important; height: 55px !important; border-radius: 50% !important; border: 2px solid #10b981 !important; overflow: hidden !important; background: #020617 !important; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4) !important; }
+        .logo-img img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+        .site-brand { color: #ffffff !important; font-size: 22px !important; font-weight: 900 !important; letter-spacing: -0.5px !important; text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important; }
+        .cyber-nav { display: flex !important; gap: 25px !important; }
+        .cyber-nav-link { color: #f3f4f6 !important; text-decoration: none !important; font-weight: 900 !important; font-size: 13px !important; letter-spacing: 1px !important; text-shadow: 0 2px 5px rgba(0,0,0,0.9) !important; transition: all 0.25s ease !important; }
+        .cyber-nav-link:hover, .cyber-nav-link:active { color: #10b981 !important; text-shadow: 0 0 12px #10b981 !important; }
 
         /* Ortadaki İçerik Alanı */
-        .cyber-main {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            padding: 20px !important;
-            flex-grow: 1 !important;
-            z-index: 999 !important;
-        }
-
-        /* 💡 Resmin üzerindeki yeşil halkanın tam içine oturacak şeffaf buton kapsayıcısı */
+        .cyber-main { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; padding: 20px !important; flex-grow: 1 !important; z-index: 9999 !important; }
+        
+        /* Güçlü Siber Yeşil Neon Panel */
         .cyber-neon-box {
-            background: rgba(4, 10, 15, 0.40) !important; /* Resmin arkasını tamamen kapatmaz, şeffaf gösterir */
-            padding: 10px !important;
-            max-width: 420px !important;
-            width: 100% !important;
-            text-align: center !important;
-            margin-top: 80px !important; /* Haritadaki halkanın dikey konumuna denk gelmesi için aşağı itildi */
+            background: rgba(4, 10, 15, 0.94) !important; border: 2px solid #10b981 !important; box-shadow: 0 0 35px rgba(16, 185, 129, 0.5) !important;
+            padding: 25px !important; border-radius: 20px !important; max-width: 440px !important; width: 100% !important; text-align: center !important;
         }
 
-        /* 💡 DOKUNDUĞUNDA SİBER YEŞİL IŞIK SAÇAN NEON BUTONLAR */
+        /* DOKUNDUĞUNDA ETRAFA IŞIK SAÇAN NEON BUTONLAR */
         .neon-action-btn {
-            display: block !important;
-            width: 100% !important;
-            padding: 15px !important;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
-            border-radius: 12px !important;
-            text-decoration: none !important;
-            font-size: 17px !important;
-            font-weight: 900 !important;
-            letter-spacing: 0.5px !important;
-            border: 2px solid #10b981 !important;
-            color: #10b981 !important; /* Sistem silemesin diye yeşil kilitlendi */
-            background: #020617 !important;
-            text-shadow: 0 0 8px #10b981 !important;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4) !important;
-            transition: all 0.2s ease-in-out !important;
+            display: block !important; width: 100% !important; padding: 15px !important; margin-bottom: 15px !important; border-radius: 12px !important;
+            text-decoration: none !important; font-size: 18px !important; font-weight: 900 !important; letter-spacing: 0.5px !important;
+            border: 2px solid #10b981 !important; color: #10b981 !important; background: #020617 !important;
+            text-shadow: 0 0 8px #10b981 !important; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3) !important; transition: all 0.2s ease-in-out !important;
         }
+        .neon-action-btn:hover, .neon-action-btn:active { background: #10b981 !important; color: #020617 !important; text-shadow: none !important; box-shadow: 0 0 35px #10b981, 0 0 70px #10b981 !important; transform: scale(1.04) !important; }
+        
+        /* WhatsApp Butonuna Özel Siber Yeşil Işık */
+        .neon-wtsp { border-color: #22c55e !important; color: #22c55e !important; text-shadow: 0 0 8px #22c55e !important; box-shadow: 0 0 15px rgba(34, 197, 94, 0.3) !important; }
+        .neon-wtsp:hover, .neon-wtsp:active { background: #22c55e !important; color: #020617 !important; text-shadow: none !important; box-shadow: 0 0 35px #22c55e, 0 0 70px #22c55e !important; }
 
-        /* Dokunulduğunda ve üzerine gelindiğinde siber parlama efekti */
-        .neon-action-btn:hover, .neon-action-btn:active {
-            background: #10b981 !important;
-            color: #020617 !important;
-            text-shadow: none !important;
-            box-shadow: 0 0 35px #10b981, 0 0 70px #10b981 !important;
-            transform: scale(1.03) !important;
-        }
-
-        /* WhatsApp Butonuna Özel Siber Yeşil Parlama */
-        .neon-wtsp {
-            border-color: #22c55e !important;
-            color: #22c55e !important;
-            text-shadow: 0 0 8px #22c55e !important;
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4) !important;
-        }
-
-        .neon-wtsp:hover, .neon-wtsp:active {
-            background: #22c55e !important;
-            box-shadow: 0 0 35px #22c55e, 0 0 70px #22c55e !important;
-        }
-
-        /* Google Anahtar Kelimeler Şeridi */
-        .cyber-seo-section {
-            margin-top: 25px !important;
-            padding: 15px !important;
-            background: rgba(3, 7, 18, 0.9) !important; /* Kelimelerin beyazda kaybolmasını önleyen siyah taban */
-            border-top: 1px solid rgba(16, 185, 129, 0.3) !important;
-            border-bottom: 1px solid rgba(16, 185, 129, 0.3) !important;
-            width: 100% !important;
-            z-index: 999 !important;
-        }
-
-        .cyber-seo-title {
-            font-size: 11px !important;
-            color: #10b981 !important;
-            font-weight: bold !important;
-            text-transform: uppercase !important;
-            letter-spacing: 2px !important;
-            margin-bottom: 12px !important;
-            text-align: center !important;
-            text-shadow: 0 0 5px rgba(16, 185, 129, 0.4) !important;
-        }
-
-        .cyber-seo-grid {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            gap: 6px !important;
-            max-width: 1000px !important;
-            margin: 0 auto !important;
-        }
-
-        .cyber-keyword {
-            background: rgba(15, 23, 42, 0.95) !important;
-            border: 1px solid rgba(16, 185, 129, 0.4) !important;
-            color: #ffffff !important; /* Net okunma beyazı */
-            padding: 5px 10px !important;
-            border-radius: 6px !important;
-            font-size: 11px !important;
-            font-weight: 700 !important;
-            transition: all 0.2s !important;
-        }
+        /* Google Anahtar Kelimeler Alanı */
+        .cyber-seo-section { margin-top: 20px !important; padding-top: 15px !important; border-top: 1px solid rgba(16, 185, 129, 0.3) !important; }
+        .cyber-seo-title { font-size: 11px !important; color: #10b981 !important; font-weight: bold !important; text-transform: uppercase !important; letter-spacing: 2px !important; margin-bottom: 12px !important; text-shadow: 0 0 5px rgba(16, 185, 129, 0.4) !important; }
+        .cyber-seo-grid { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 6px !important; }
+        .cyber-keyword { background: rgba(15, 23, 42, 0.95) !important; border: 1px solid rgba(16, 185, 129, 0.4) !important; color: #ffffff !important; padding: 5px 9px !important; border-radius: 6px !important; font-size: 11px !important; font-weight: 700 !important; }
 
         /* Alt Bilgi */
-        .cyber-footer {
-            width: 100% !important;
-            text-align: center !important;
-            padding: 12px !important;
-            font-size: 11px !important;
-            color: #6b7280 !important;
-            background: rgba(3, 7, 18, 0.9) !important;
-            z-index: 999 !important;
-        }
+        .cyber-footer { width: 100% !important; text-align: center !important; padding: 12px !important; font-size: 11px !important; color: #4b5563 !important; background: rgba(2, 6, 23, 0.8) !important; z-index: 99999 !important; }
 
-        /* Mobil Ekran Yerleşim Dengesi */
         @media (max-width: 650px) {
-            .cyber-header {
-                flex-direction: column !important;
-                gap: 10px !important;
-                align-items: flex-start !important; /* Mobilde de logoyu sola yaslar */
-                padding: 12px 15px !important;
-            }
-            .cyber-nav {
-                gap: 10px !important;
-                width: 100% !important;
-                justify-content: space-between !important;
-            }
-            .cyber-nav-link {
-                font-size: 11px !important;
-            }
-            .cyber-neon-box {
-                margin-top: 30px !important; /* Mobilde halkanın içine oturması için mesafe daraltıldı */
-                max-width: 95% !important;
-            }
-            .neon-action-btn {
-                font-size: 15px !important;
-                padding: 13px !important;
-            }
+            .cyber-header { flex-direction: column !important; gap: 12px !important; align-items: flex-start !important; padding: 15px !important; }
+            .cyber-nav { gap: 12px !important; width: 100% !important; justify-content: space-between !important; margin-top: 8px !important; }
+            .cyber-nav-link { font-size: 11px !important; }
+            .cyber-neon-box { padding: 20px !important; max-width: 95% !important; }
+            .neon-action-btn { font-size: 16px !important; padding: 13px !important; }
         }
     </style>
 </head>
@@ -246,7 +73,7 @@
 
     <div class="cyber-bg-wrapper">
         
-        <!-- ÜST MENÜ VE LOGO ALANI (Siyah Korumalı Şeritli) -->
+        <!-- ÜST MENÜ VE LOGO ALANI -->
         <header class="cyber-header">
             <div class="logo-box">
                 <div class="logo-img">
@@ -258,3 +85,51 @@
                 <a href="#" class="cyber-nav-link">ANA SAYFA</a>
                 <a href="#" class="cyber-nav-link">HAKKIMIZDA</a>
                 <a href="#" class="cyber-nav-link">HİZMETLERİMİZ</a>
+                <a href="#" class="cyber-nav-link">İLETİŞİM</a>
+            </nav>
+        </header>
+
+        <!-- ORTA ALAN: NEON BUTONLAR VE TDK UYUMLU TERİMLER -->
+        <main class="cyber-main">
+            <div class="cyber-neon-box">
+                
+                <!-- HEMEN ARA BUTONU -->
+                <a href="tel:05309316697" class="neon-action-btn">
+                    📞 HEMEN ARA: 0530 931 66 97
+                </a>
+                
+                <!-- WHATSAPP BUTONU -->
+                <a href="https://wa.me" target="_blank" class="neon-action-btn neon-wtsp">
+                    💬 WHATSAPP KONUM AT
+                </a>
+
+                <!-- GOOGLE SEO ALANI -->
+                <div class="cyber-seo-section">
+                    <div class="cyber-seo-title">Hızlı Erişim Terimleri</div>
+                    <div class="cyber-seo-grid">
+                        <span class="cyber-keyword">Çilingir</span>
+                        <span class="cyber-keyword">Anahtarcı</span>
+                        <span class="cyber-keyword">7/24 Çilingir</span>
+                        <span class="cyber-keyword">Çilingir Fiyatı</span>
+                        <span class="cyber-keyword">Çilingir Numarası</span>
+                        <span class="cyber-keyword">Acil Çilingir</span>
+                        <span class="cyber-keyword">Nöbetçi Çilingir</span>
+                        <span class="cyber-keyword">En Yakın Çilingir</span>
+                        <span class="cyber-keyword">Yakınımda Çilingir</span>
+                        <span class="cyber-keyword">Oto Çilingir</span>
+                        <span class="cyber-keyword">Çelik Kasa Çilingir</span>
+                        <span class="cyber-keyword">Adresinize Konumunuza En Yakın Çilingir</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="cyber-footer">
+            &copy; 2026 cilingirnumarasi.com. Tüm Hakları Saklıdır.
+        </footer>
+
+    </div>
+
+</body>
+</html>
