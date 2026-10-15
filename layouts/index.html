@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çilingir Numarası - cilingirnumarasi.com</title>
+    <title>7/24 En Yakın Oto Çilingir Numarası - cilingirnumarasi.com</title>
+    <!-- Tailwind CSS Kütüphanesi -->
+    <script src="https://tailwindcss.com"></script>
     <style>
         /* Tüm boşlukları sıfırlayarak resmi tam ekran yapıyoruz */
         * {
@@ -15,79 +17,128 @@
         body, html {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #030712;
         }
 
-        /* Yapay zeka ile hazırladığınız "oto-cilingir.jpg" ana görseli */
+        /* Yapay zeka amblemli orijinal görseliniz */
         .bg-container {
             width: 100%;
             height: 100%;
-            /* Belirttiğiniz oto-cilingir.jpg isminin tüm olasılıkları sisteme eklendi */
-            background-image: 
-                url('{{ "oto-cilingir.jpg" | relURL }}'), 
-                url('/oto-cilingir.jpg'), 
-                url('/static/oto-cilingir.jpg'),
-                url('{{ "oto-cilingir.JPG" | relURL }}'), 
-                url('/oto-cilingir.JPG'), 
-                url('/static/oto-cilingir.JPG');
-            background-size: contain;
+            background-image: url('{{ "oto-cilingir.jpg" | relURL }}'), url('/oto-cilingir.jpg'), url('/static/oto-cilingir.jpg');
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        /* Üst taraftaki "cilingir-numarasi.jpg" logosu için alan */
-        .logo-box {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            z-index: 20;
+        /* Butonlara dokunulduğunda veya üzerine gelindiğinde siber neon yeşili ışık saçma efekti */
+        .neon-btn-green {
+            border: 2px solid #10b981;
+            color: #10b981;
+            background: rgba(4, 10, 15, 0.8);
+            text-shadow: 0 0 5px #10b981;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease-in-out;
         }
 
-        .logo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        /* Dokunma (active) ve Üzerine Gelme (hover) Durumunda Işık Patlaması */
+        .neon-btn-green:hover, .neon-btn-green:active {
+            background: #10b981;
+            color: #020617;
+            text-shadow: none;
+            box-shadow: 0 0 25px #10b981, 0 0 45px #10b981;
+            transform: scale(1.05);
         }
 
-        /* Resmin tam ortasındaki telefon numarasının üzerine binen GÖRÜNMEZ tıklama alanı */
-        .invisible-call-link {
-            position: absolute;
-            display: block;
-            /* Resimdeki numaranın tam üzerine denk gelecek genişlik ve yükseklik alanı */
-            width: 340px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0); /* Tamamen şeffaf ve görünmez */
-            cursor: pointer;
-            text-decoration: none;
-            z-index: 10;
-            border-radius: 50px;
-            /* Mobil ve webde tam ortalamak için */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin-top: 30px; /* Görseldeki dikey konuma göre gerekirse aşağı yukarı kaydırılabilir */
+        /* Navigasyon Linkleri İçin Neon Efekti */
+        .nav-link {
+            color: #e5e5e5;
+            transition: all 0.2s ease;
+            text-shadow: 0 0 2px rgba(0,0,0,0.8);
+        }
+        .nav-link:hover, .nav-link:active {
+            color: #10b981;
+            text-shadow: 0 0 8px #10b981;
+        }
+
+        /* Google Anahtar Kelimeler Alanını Hafifçe Okunabilir Kılan Siber Şerit */
+        .seo-tag {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #9ca3af;
+            transition: all 0.2s;
+        }
+        .seo-tag:hover {
+            border-color: #10b981;
+            color: #10b981;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
         }
     </style>
 </head>
 <body>
 
     <div class="bg-container">
-        <!-- Sol üst köşeye aslan amblemli logonuzu getirir -->
-        <div class="logo-box">
-            <img src="{{ "cilingir-numarasi.jpg" | relURL }}" onerror="this.src='/cilingir-numarasi.jpg'; this.onerror=function(){this.src='/static/cilingir-numarasi.jpg';}" alt="Logo">
-        </div>
+        
+        <!-- ÜST MENÜ (Üst sol köşeye logo, sağ tarafa menü sayfaları) -->
+        <header class="w-full max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full border border-[#10b981]/50 overflow-hidden bg-neutral-900 shadow-md">
+                    <img src="{{ "cilingir-numarasi.jpg" | relURL }}" onerror="this.src='/cilingir-numarasi.jpg'; this.onerror=function(){this.src='/static/cilingir-numarasi.jpg';}" alt="Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="font-bold text-lg text-white tracking-tight">cilingirnumarasi.com</span>
+            </div>
+            
+            <!-- İstediğiniz Sayfa Navigasyonu -->
+            <nav class="flex items-center space-x-6 text-sm font-black tracking-wider">
+                <a href="#" class="nav-link">ANA SAYFA</a>
+                <a href="#" class="nav-link">HAKKIMIZDA</a>
+                <a href="#" class="nav-link">HİZMETLERİMİZ</a>
+                <a href="#" class="nav-link">İLETİŞİM</a>
+            </nav>
+        </header>
 
-        <!-- Ziyaretçi resmin ortasındaki numaraya dokunduğu an doğrudan telefon araması açılır -->
-        <a href="tel:05309316697" class="invisible-call-link" title="Hemen Ara"></a>
+        <!-- ORTA ALAN: HEMEN ARA VE WHATSAPP BUTONLARI -->
+        <main class="flex flex-col items-center justify-center px-4 py-8 z-20 my-auto space-y-4">
+            <div class="max-w-md w-full space-y-3">
+                <!-- HEMEN ARA BUTONU (Işık Saçan Neon) -->
+                <a href="tel:05309316697" class="neon-btn-green w-full block text-center font-black text-xl py-4 px-6 rounded-xl tracking-widest">
+                    📞 HEMEN ARA: 0530 931 66 97
+                </a>
+                
+                <!-- WHATSAPP BUTONU (Işık Saçan Neon) -->
+                <a href="https://wa.me" target="_blank" class="neon-btn-green w-full block text-center font-black text-xl py-4 px-6 rounded-xl tracking-widest">
+                    💬 WHATSAPP KONUM AT
+                </a>
+            </div>
+        </main>
+
+        <!-- ALT ALAN: GOOGLE İÇİN SİBER ANAHTAR KELİMELER (SEO TAGS) -->
+        <section class="w-full max-w-7xl mx-auto px-6 py-4 z-20">
+            <div class="flex flex-wrap justify-center gap-2 text-[10px] md:text-xs font-medium">
+                <span class="seo-tag px-3 py-1 rounded-md">çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">anahtarci</span>
+                <span class="seo-tag px-3 py-1 rounded-md">7/24 Çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">Çilingir Fiyatı</span>
+                <span class="seo-tag px-3 py-1 rounded-md">Çilingir Numarası</span>
+                <span class="seo-tag px-3 py-1 rounded-md">acil çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">nöbetçi çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">en yakın çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">yakınımda çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">oto çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">çelik kasa çilingir</span>
+                <span class="seo-tag px-3 py-1 rounded-md">Adresinize konumunuza En yakın Çilingir</span>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="w-full text-center py-3 text-[10px] text-neutral-600 bg-black/40 backdrop-blur-sm z-20">
+            &copy; 2026 cilingirnumarasi.com. Tüm Hakları Saklıdır.
+        </footer>
+
     </div>
 
 </body>
