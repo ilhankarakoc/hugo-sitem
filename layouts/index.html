@@ -23,8 +23,14 @@
         .bg-container {
             width: 100%;
             height: 100%;
-            /* Hugo'nun kendi resmi bulma fonksiyonunu ekledik */
-            background-image: url('{{ "site-on-yuz.png" | relURL }}'), url('/site-on-yuz.png'), url('/static/site-on-yuz.png');
+            /* JPG ve büyük harf JPG olasılıklarının tamamı sisteme tanımlandı */
+            background-image: 
+                url('{{ "site-on-yuz.jpg" | relURL }}'), 
+                url('/site-on-yuz.jpg'), 
+                url('/static/site-on-yuz.jpg'),
+                url('{{ "site-on-yuz.JPG" | relURL }}'), 
+                url('/site-on-yuz.JPG'), 
+                url('/static/site-on-yuz.JPG');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
