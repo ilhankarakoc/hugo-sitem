@@ -1,45 +1,99 @@
----
-layout: default
----
-<style>
-body{background:#020617;color:#fff;font-family:Inter;overflow:hidden;margin:0}
-nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(2,6,23,.96);border-bottom:1.5px solid rgba(255,215,0,.3);display:flex;justify-content:space-between;align-items:center;padding:0 20px;z-index:9999}
-.brand{display:flex;align-items:center;gap:12px}.brand img{width:50px;height:50px;border-radius:13px;background:#fff;padding:3px;box-shadow:0 0 2px #FFD700,0 0 25px #FFD700}
-.brand b{font-family:Cinzel;font-weight:900;font-size:12px;color:#FFD700;line-height:1.1}
-.menu{display:flex;gap:20px}.menu a{color:#8b95a5;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:1.5px}
-.hero{width:100vw;height:100svh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px;background:#020617}
-.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.25) contrast(1.2)}
-.grad{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,6,23,.15) 0%,rgba(2,6,23,.7) 75%,#020617 100%)}
-.wrap{position:relative;z-index:2;text-align:center;padding:24px;max-width:1000px}
-.badge{display:inline-block;background:rgba(0,255,157,.15);border:1px solid #00ff9d;color:#00ff9d;padding:10px 22px;border-radius:100px;font-size:11px;font-weight:900;letter-spacing:2px;margin-bottom:18px}
-.hero h1{font-family:Cinzel;font-weight:900;font-size:clamp(34px,7vw,68px);line-height:.95;color:#FFD700;text-shadow:0 0 25px rgba(255,215,0,.8),0 5px #000}
-.alt{margin:18px 0 28px;color:#cbd5e1;font-size:15px;font-weight:700}
-.btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn{padding:20px 36px;background:#0a0a0a;border:2px solid #FFD700;border-radius:100px;font-family:Cinzel;font-weight:900;font-size:16px;text-decoration:none;color:#FFD700!important;box-shadow:0 0 20px rgba(255,215,0,.4);transition:.3s}
-.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 0 35px #FFD700}
-.btn.green{border-color:#00ff9d;color:#00ff9d!important;box-shadow:0 0 20px rgba(0,255,157,.4)}
-#thunbork{display:none!important}
-</style>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çilingir Numarası - cilingirnumarasi.com</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcss.com"></script>
+    <style>
+        /* Tam İstediğiniz Siber Yeşil Neon Efektleri */
+        .neon-green-text {
+            color: #10b981;
+            text-shadow: 0 0 5px #10b981, 0 0 10px #10b981, 0 0 20px #047857;
+            font-family: monospace;
+        }
 
-<nav><div class="brand"><img src="/cilingir-anahtarci-numarasi.jpg"><b>ÇİLİNGİR<br>NUMARASI</b></div><div class="menu"><a>ANA SAYFA</a><a>HAKKIMIZDA</a><a>HİZMETLERİMİZ</a><a>İLETİŞİM</a></div></nav>
+        .neon-green-card {
+            background: rgba(4, 10, 15, 0.85);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
 
-<div class="hero">
-<img class="bg" src="/ana-gorsel.jpg">
-<div class="grad"></div>
-<div class="wrap">
-<div class="badge">81 İL 973 İLÇE 32.000 MAHALLE - 15 DK - 7/24</div>
-<h1>ÇİLİNGİR<br>NUMARASI</h1>
-<div class="alt">Yüksek Güvenlikli Kilit • Oto Anahtar • Hasarsız Açma • cilingirnumarasi.com</div>
-<div class="btns">
-<a class="btn" href="tel:+905309316697">✦ 0530 931 66 97 ✦</a>
-<a class="btn green" href="https://wa.me/905309316697">WhatsApp Konum At</a>
-</div>
-</div>
-</div>
-<div id="thunbork"></div>
-<script>
-const K="thunbork_final";const L=3;const T=new Date().toISOString().slice(0,10);
-function g(){try{const d=JSON.parse(localStorage.getItem(K)||"{}");return d.date!==T?{date:T,count:0}:d}catch{return{date:T,count:0}}}
-function s(d){localStorage.setItem(K,JSON.stringify(d))}
-document.querySelectorAll('a[href^="tel:"],a[href*="wa.me"]').forEach(a=>a.addEventListener("click",e=>{let d=g();if(d.count>=L){e.preventDefault();return false}d.count++;s(d)}));
-</script>
+        .glow-green-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            animation: greenPulse 2s infinite alternate;
+        }
+
+        @keyframes greenPulse {
+            0% {
+                box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+                transform: scale(1);
+            }
+            100% {
+                box-shadow: 0 0 35px rgba(16, 185, 129, 0.8);
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+
+<!-- Arka plan resmi hem mobil hem web ekranına göre kendini otomatik ayarlar -->
+<body class="bg-[#020617] text-neutral-100 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-cover bg-center bg-no-repeat attachment-fixed" style="background-image: url('/static/site-on-yuz.png');">
+
+    <!-- Arka planın üzerine hafif karartma atarak yazıların okunmasını kolaylaştırır -->
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+    <!-- Üst Bilgi (Header) - Mobil ve Web Uyumlu -->
+    <header class="w-full max-w-7xl mx-auto px-4 py-4 md:py-6 flex flex-col sm:flex-row justify-between items-center z-20 gap-4">
+        <div class="flex items-center space-x-3">
+            <!-- Düzelttiğimiz Aslanlı Logo -->
+            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-[#10b981]/60 overflow-hidden bg-neutral-900 shadow-lg">
+                <img src="/static/logo.png" alt="Çilingir Numarası Logo" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+                <!-- Haritadaki yeşil yazı konsepti -->
+                <span class="neon-green-text text-[10px] md:text-xs tracking-widest uppercase block font-bold">
+                    81 İL 973 İLÇE 32.000 MAHALLE - 15 DK - 7/24
+                </span>
+                <span class="font-bold text-lg md:text-2xl text-white tracking-tight">
+                    cilingirnumarasi.com
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik Alanı - Mobilde ezilmeyi önleyen esnek yapı -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4 z-20 text-center my-auto">
+        <!-- Yeşil Siber Neon Kart -->
+        <div class="neon-green-card p-6 md:p-8 rounded-2xl max-w-md w-full space-y-5">
+            <h1 class="text-xl md:text-3xl font-black text-white tracking-wide">
+                TÜRKİYE GENELİ <br>
+                <span class="text-[#10b981]">OTO ÇİLİNGİR</span>
+            </h1>
+            
+            <p class="text-xs md:text-sm text-neutral-300 leading-relaxed">
+                Haritadaki siber ağımızla en yakın usta 15 dakikada yanınızda. Güvenli hizmet için hemen bağlanın.
+            </p>
+            
+            <!-- Tıklanınca Doğrudan Arayan Yeşil Neon Buton -->
+            <a href="tel:05309316697" class="glow-green-btn text-neutral-950 font-black text-lg md:text-xl py-4 px-6 rounded-xl block transition-all duration-300 transform tracking-wider">
+                📞 0530 931 66 97
+            </a>
+            
+            <!-- WhatsApp Hızlı Bağlantı -->
+            <a href="https://wa.me" target="_blank" class="block text-xs md:text-sm text-neutral-400 hover:text-[#10b981] transition-colors duration-200">
+                💬 WhatsApp Konum At
+            </a>
+        </div>
+    </main>
+
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="w-full text-center py-4 text-[10px] md:text-xs text-neutral-500 z-20 bg-neutral-950/60 backdrop-blur-sm">
+        &copy; 2026 cilingirnumarasi.com. Tüm Hakları Saklıdır.
+    </footer>
+
+</body>
+</html>
