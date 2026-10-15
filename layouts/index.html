@@ -1,9 +1,7 @@
 <!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Çilingir Numarası - cilingirnumarasi.com</title><style>
     * { margin:0!important; padding:0!important; box-sizing:border-box!important; }
     body,html { width:100%!important; height:100%!important; min-height:100vh!important; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif!important; background-color:#030712!important; overflow-x:hidden!important; }
-    
     .cyber-layout-container { display:flex!important; flex-direction:column!important; min-height:100vh!important; justify-content:space-between!important; position:relative!important; }
-    
     .cyber-header { width:100%!important; background:rgba(3,7,18,.96)!important; border-bottom:1px solid rgba(16,185,129,.4)!important; padding:15px 25px!important; display:flex!important; justify-content:space-between!important; align-items:center!important; z-index:99999!important; height:75px!important; }
     .logo-box { display:flex!important; align-items:center!important; gap:12px!important; }
     .logo-img { width:45px!important; height:45px!important; border-radius:50%!important; border:2px solid #10b981!important; overflow:hidden!important; background:#020617!important; box-shadow:0 0 15px rgba(16,185,129,.4)!important; }
@@ -12,45 +10,47 @@
     .cyber-nav { display:flex!important; gap:25px!important; }
     .cyber-nav-link { color:#f3f4f6!important; text-decoration:none!important; font-weight:900!important; font-size:13px!important; }
 
-    /* 💡 WEBDE RESMİ TAM 1 CM YUKARI ALAN VE SABİTLEYEN GÖRSEL KUTUSU */
+    /* Web Görsel Alanı (Kesilmez, Tam Sığar ve 1 cm Yukarıda) */
     .cyber-image-center-box { width:100%!important; max-width:520px!important; margin:0 auto!important; display:block!important; position:relative!important; z-index:10!important; top:35px!important; }
     .cyber-image-center-box img { width:100%!important; height:auto!important; object-fit:contain!important; display:block!important; }
 
-    /* 💡 BİLGİSAYARDA YAN KUTULARI ASLANLARIN SAĞINA VE SOLUNA KİLİTLENEN ALAN */
+    /* Web Sağ-Sol Simetrik Kolonlar */
     .cyber-content-section { position:absolute!important; top:95px!important; left:50%!important; transform:translateX(-50%)!important; width:100%!important; max-width:1400px!important; padding:0 40px!important; display:flex!important; flex-direction:row!important; justify-content:space-between!important; pointer-events:none!important; z-index:9999!important; }
     .cyber-column { flex:1!important; display:flex!important; flex-direction:column!important; gap:25px!important; max-width:350px!important; pointer-events:auto!important; }
     .cyber-column-left { align-items:flex-start!important; margin-top:140px!important; }
     .cyber-column-right { align-items:flex-end!important; margin-top:140px!important; }
 
-    /* Neon Buton Mekanizmaları */
+    /* Siber Butonlar ve Parlama Efektleri */
     .neon-action-btn { display:block!important; width:100%!important; padding:15px!important; border-radius:12px!important; text-decoration:none!important; font-size:16px!important; font-weight:900!important; border:2px solid #10b981!important; color:#10b981!important; background:rgba(4,10,15,.96)!important; text-shadow:0 0 8px #10b981!important; box-shadow:0 0 20px rgba(16,185,129,.4)!important; text-align:center!important; }
     .neon-action-btn:hover, .neon-action-btn:active { background:#10b981!important; color:#020617!important; text-shadow:none!important; box-shadow:0 0 35px #10b981,0 0 70px #10b981!important; }
     .neon-wtsp-right { border-color:#22c55e!important; color:#22c55e!important; text-shadow:0 0 8px #22c55e!important; box-shadow:0 0 20px rgba(34,197,94,.4)!important; }
     .neon-wtsp-right:hover, .neon-wtsp-right:active { background:#22c55e!important; box-shadow:0 0 35px #22c55e,0 0 70px #22c55e!important; color:#020617!important; }
 
-    /* Siber Kategori Panelleri (Web) */
+    /* Web Siber Kelime Panelleri */
     .cyber-sub-panel { width:100%!important; background:rgba(4,10,15,.96)!important; border:2px solid #10b981!important; box-shadow:0 0 25px rgba(16,185,129,.3)!important; padding:18px!important; border-radius:14px!important; text-align:center!important; }
     .panel-headline { font-size:14px!important; color:#10b981!important; font-weight:bold!important; text-transform:uppercase!important; letter-spacing:2px!important; margin-bottom:10px!important; text-shadow:0 0 5px rgba(16,185,129,.4)!important; }
     .panel-tags-grid { display:flex!important; flex-wrap:wrap!important; justify-content:center!important; gap:5px!important; }
-    .cyber-keyword { background:rgba(15,23,42,.95)!important; border:1px solid rgba(16,185,129,.4)!important; color:#fff!important; padding:4px 8px!important; border-radius:6px!important; font-size:10px!important; font-weight:700!important; display:inline-block!important; }
+    .cyber-keyword { background:rgba(15,23,42,.95)!important; border:1px solid rgba(16,185,129,.4)!important; color:#ffffff!important; padding:4px 8px!important; border-radius:6px!important; font-size:10px!important; font-weight:700!important; display:inline-block!important; }
 
-    /* Sadece Mobilde Devreye Giren Kapsayıcılar */
+    /* Telefon Gizleme Kuralları */
     .cyber-main-mobile { display:none!important; }
     .cyber-combined-panel-mobile { display:none!important; }
     .mobile-buttons-stack { display:none!important; }
     .cyber-footer { width:100%!important; padding:15px!important; font-size:11px!important; color:#4b5563!important; background:rgba(2,6,23,.95)!important; z-index:99999!important; border-top:1px solid rgba(16,185,129,.2)!important; text-align:center!important; }
 
-    /* 💡 MOBİL KURALI: TELEFONDA HER ŞEYİ KUSURSUZ VE GÖRÜNÜR GÖSTEREN SİSTEM */
+    /* 💡 MOBİL KURALI: TELEFONDA TÜM KELİMELERİ VE BUTONLARI DIŞARI ZORLAYAN SİSTEM */
     @media (max-width:900px){
         .cyber-header { flex-direction:column!important; gap:10px!important; align-items:flex-start!important; padding:12px 15px!important; height:auto!important; }
         .cyber-nav { gap:12px!important; width:100%!important; justify-content:space-between!important; margin-top:6px!important; }
         .cyber-image-center-box { max-width:100%!important; padding:0 5px!important; margin:0 auto!important; top:10px!important; }
         .cyber-content-section { display:none!important; }
         
-        /* Mobilde Kelimeleri ve Butonları Netleştiren Alan */
+        /* 💡 Kelimelerin inatla çıkmasını sağlayan mutlak görünürlük kilitleri */
         .cyber-main-mobile { display:flex!important; flex-direction:column!important; align-items:center!important; width:100%!important; padding:10px!important; z-index:9999!important; margin-top:15px!important; }
         .mobile-buttons-stack { width:100%!important; display:flex!important; flex-direction:column!important; gap:10px!important; margin-bottom:15px!important; }
         .cyber-combined-panel-mobile { display:block!important; width:100%!important; background:rgba(4,10,15,.95)!important; border:2px solid #10b981!important; box-shadow:0 0 35px rgba(16,185,129,.4)!important; padding:15px!important; border-radius:16px!important; text-align:center!important; }
+        .cyber-combined-panel-mobile * { color:#ffffff!important; display:inline-block!important; }
+        .cyber-combined-panel-mobile .panel-headline { color:#10b981!important; display:block!important; }
     }
 </style></head><body>
 
@@ -104,5 +104,3 @@
         <main class="cyber-main-mobile">
             <div class="mobile-buttons-stack">
                 <a href="tel:05309316697" class="neon-action-btn">HEMEN ARA: 0530 931 66 97</a>
-                <a href="https://wa.me" target="_blank" class="neon-action-btn neon-wtsp">💬 WHATSAPP KONUM AT</a>
-            </div>
