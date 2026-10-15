@@ -4,142 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7/24 En Yakın Oto Çilingir Numarası - cilingirnumarasi.com</title>
-    <!-- Tailwind CSS Kütüphanesi -->
-    <script src="https://tailwindcss.com"></script>
     <style>
-        /* Tüm boşlukları sıfırlayarak resmi tam ekran yapıyoruz */
-        * {
+        /* Tüm tarayıcı varsayılanlarını sıfırlıyoruz */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
             margin: 0;
             padding: 0;
+            border: 0;
             box-sizing: border-box;
         }
 
         body, html {
-            width: 100%;
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #030712;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 100vh !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            background-color: #030712 !important;
+            overflow-x: hidden !important;
         }
 
-        /* Yapay zeka amblemli orijinal görseliniz */
-        .bg-container {
-            width: 100%;
-            height: 100%;
-            background-image: url('{{ "oto-cilingir.jpg" | relURL }}'), url('/oto-cilingir.jpg'), url('/static/oto-cilingir.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        /* Yapay zeka tasarımınızı tam ekran yapan kapsayıcı */
+        .cyber-bg-wrapper {
+            min-height: 100vh !important;
+            width: 100% !important;
+            background-image: url('/oto-cilingir.jpg'), url('oto-cilingir.jpg'), url('/static/oto-cilingir.jpg') !important;
+            background-size: cover !important;
+            background-position: center top !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            position: relative !important;
         }
 
-        /* Butonlara dokunulduğunda veya üzerine gelindiğinde siber neon yeşili ışık saçma efekti */
-        .neon-btn-green {
+        /* Üst Menü Tasarımı */
+        .cyber-header {
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 25px 20px !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            z-index: 99 !important;
+        }
+
+        .site-brand {
+            color: #ffffff !important;
+            font-size: 22px !important;
+            font-weight: 900 !important;
+            letter-spacing: -0.5px !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+        }
+
+        .cyber-nav {
+            display: flex !important;
+            gap: 30px !important;
+        }
+
+        .cyber-nav-link {
+            color: #f3f4f6 !important;
+            text-decoration: none !important;
+            font-weight: 900 !important;
+            font-size: 13px !important;
+            letter-spacing: 1px !important;
+            transition: all 0.25s ease !important;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.9) !important;
+        }
+
+        .cyber-nav-link:hover, .cyber-nav-link:active {
+            color: #10b981 !important;
+            text-shadow: 0 0 12px #10b981 !important;
+        }
+
+        /* Ortadaki İçerik Alanı */
+        .cyber-main {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 40px 20px !important;
+            flex-grow: 1 !important;
+            z-index: 99 !important;
+        }
+
+        /* 💡 DOKUNDUĞUNDA IŞIK SAÇAN MODERN NEON KUTU */
+        .cyber-neon-box {
+            background: rgba(4, 10, 15, 0.9) !important;
+            border: 1px solid rgba(16, 185, 129, 0.5) !important;
+            box-shadow: 0 0 35px rgba(16, 185, 129, 0.25) !important;
+            padding: 30px !important;
+            border-radius: 20px !important;
+            max-width: 480px !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        /* Işık Patlamalı Butonlar */
+        .neon-action-btn {
+            display: block !important;
+            width: 100% !important;
+            padding: 16px !important;
+            margin-bottom: 15px !important;
+            border-radius: 12px !important;
+            text-decoration: none !important;
+            font-size: 18px !important;
+            font-weight: 900 !important;
+            letter-spacing: 1px !important;
             border: 2px solid #10b981;
             color: #10b981;
-            background: rgba(4, 10, 15, 0.8);
-            text-shadow: 0 0 5px #10b981;
-            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
-            transition: all 0.3s ease-in-out;
+            background: rgba(2, 6, 23, 0.7) !important;
+            text-shadow: 0 0 5px #10b981 !important;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.2) !important;
+            transition: all 0.2s ease-in-out !important;
         }
 
-        /* Dokunma (active) ve Üzerine Gelme (hover) Durumunda Işık Patlaması */
-        .neon-btn-green:hover, .neon-btn-green:active {
-            background: #10b981;
-            color: #020617;
-            text-shadow: none;
-            box-shadow: 0 0 25px #10b981, 0 0 45px #10b981;
-            transform: scale(1.05);
+        /* Parmak basıldığında veya fare üstüne geldiğinde parlaması */
+        .neon-action-btn:hover, .neon-action-btn:active {
+            background: #10b981 !important;
+            color: #020617 !important;
+            text-shadow: none !important;
+            box-shadow: 0 0 30px #10b981, 0 0 60px #10b981 !important;
+            transform: scale(1.03) !important;
         }
 
-        /* Navigasyon Linkleri İçin Neon Efekti */
-        .nav-link {
-            color: #e5e5e5;
-            transition: all 0.2s ease;
-            text-shadow: 0 0 2px rgba(0,0,0,0.8);
-        }
-        .nav-link:hover, .nav-link:active {
-            color: #10b981;
-            text-shadow: 0 0 8px #10b981;
+        .neon-wtsp {
+            border-color: #22c55e !important;
+            color: #22c55e !important;
+            text-shadow: 0 0 5px #22c55e !important;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.2) !important;
         }
 
-        /* Google Anahtar Kelimeler Alanını Hafifçe Okunabilir Kılan Siber Şerit */
-        .seo-tag {
-            background: rgba(15, 23, 42, 0.65);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            color: #9ca3af;
-            transition: all 0.2s;
+        .neon-wtsp:hover, .neon-wtsp:active {
+            background: #22c55e !important;
+            box-shadow: 0 0 30px #22c55e, 0 0 60px #22c55e !important;
         }
-        .seo-tag:hover {
-            border-color: #10b981;
-            color: #10b981;
-            box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+
+        /* Google Kelimeleri Alanı */
+        .cyber-seo-section {
+            margin-top: 20px !important;
+            padding-top: 15px !important;
+            border-top: 1px solid rgba(16, 185, 129, 0.2) !important;
+        }
+
+        .cyber-seo-title {
+            font-size: 11px !important;
+            color: #10b981 !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 12px !important;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.4) !important;
+        }
+
+        .cyber-seo-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 6px !important;
+        }
+
+        .cyber-keyword {
+            background: rgba(15, 23, 42, 0.85) !important;
+            border: 1px solid rgba(16, 185, 129, 0.2) !important;
+            color: #9ca3af !important;
+            padding: 5px 9px !important;
+            border-radius: 6px !important;
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            transition: all 0.2s !important;
+        }
+
+        .cyber-keyword:hover {
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.4) !important;
+        }
+
+        /* Alt Bilgi */
+        .cyber-footer {
+            width: 100% !important;
+            text-align: center !important;
+            padding: 15px !important;
+            font-size: 11px !important;
+            color: #4b5563 !important;
+            background: rgba(2, 6, 23, 0.8) !important;
+            z-index: 99 !important;
+        }
+
+        /* Mobil Ekran Uyumları */
+        @media (max-width: 650px) {
+            .cyber-header {
+                flex-direction: column !important;
+                gap: 15px !important;
+                text-align: center !important;
+            }
+            .cyber-nav {
+                gap: 15px !important;
+            }
+            .cyber-nav-link {
+                font-size: 11px !important;
+            }
+            .cyber-neon-box {
+                padding: 20px !important;
+            }
+            .neon-action-btn {
+                font-size: 16px !important;
+                padding: 14px !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-container">
+    <div class="cyber-bg-wrapper">
         
-        <!-- ÜST MENÜ (Üst sol köşeye logo, sağ tarafa menü sayfaları) -->
-        <header class="w-full max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-full border border-[#10b981]/50 overflow-hidden bg-neutral-900 shadow-md">
-                    <img src="{{ "cilingir-numarasi.jpg" | relURL }}" onerror="this.src='/cilingir-numarasi.jpg'; this.onerror=function(){this.src='/static/cilingir-numarasi.jpg';}" alt="Logo" class="w-full h-full object-cover">
-                </div>
-                <span class="font-bold text-lg text-white tracking-tight">cilingirnumarasi.com</span>
-            </div>
-            
-            <!-- İstediğiniz Sayfa Navigasyonu -->
-            <nav class="flex items-center space-x-6 text-sm font-black tracking-wider">
-                <a href="#" class="nav-link">ANA SAYFA</a>
-                <a href="#" class="nav-link">HAKKIMIZDA</a>
-                <a href="#" class="nav-link">HİZMETLERİMİZ</a>
-                <a href="#" class="nav-link">İLETİŞİM</a>
+        <!-- ÜST MENÜ ALANI -->
+        <header class="cyber-header">
+            <div class="site-brand">cilingirnumarasi.com</div>
+            <nav class="cyber-nav">
+                <a href="#" class="cyber-nav-link">ANA SAYFA</a>
+                <a href="#" class="cyber-nav-link">HAKKIMIZDA</a>
+                <a href="#" class="cyber-nav-link">HİZMETLERİMİZ</a>
+                <a href="#" class="cyber-nav-link">İLETİŞİM</a>
             </nav>
         </header>
 
-        <!-- ORTA ALAN: HEMEN ARA VE WHATSAPP BUTONLARI -->
-        <main class="flex flex-col items-center justify-center px-4 py-8 z-20 my-auto space-y-4">
-            <div class="max-w-md w-full space-y-3">
-                <!-- HEMEN ARA BUTONU (Işık Saçan Neon) -->
-                <a href="tel:05309316697" class="neon-btn-green w-full block text-center font-black text-xl py-4 px-6 rounded-xl tracking-widest">
+        <!-- ORTA BUTONLAR VE ANAHTAR KELİMELER -->
+        <main class="cyber-main">
+            <div class="cyber-neon-box">
+                
+                <!-- HEMEN ARA BUTONU -->
+                <a href="tel:05309316697" class="neon-action-btn">
                     📞 HEMEN ARA: 0530 931 66 97
                 </a>
                 
-                <!-- WHATSAPP BUTONU (Işık Saçan Neon) -->
-                <a href="https://wa.me" target="_blank" class="neon-btn-green w-full block text-center font-black text-xl py-4 px-6 rounded-xl tracking-widest">
+                <!-- WHATSAPP BUTONU -->
+                <a href="https://wa.me" target="_blank" class="neon-action-btn neon-wtsp">
                     💬 WHATSAPP KONUM AT
                 </a>
-            </div>
-        </main>
 
-        <!-- ALT ALAN: GOOGLE İÇİN SİBER ANAHTAR KELİMELER (SEO TAGS) -->
-        <section class="w-full max-w-7xl mx-auto px-6 py-4 z-20">
-            <div class="flex flex-wrap justify-center gap-2 text-[10px] md:text-xs font-medium">
-                <span class="seo-tag px-3 py-1 rounded-md">çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">anahtarci</span>
-                <span class="seo-tag px-3 py-1 rounded-md">7/24 Çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">Çilingir Fiyatı</span>
-                <span class="seo-tag px-3 py-1 rounded-md">Çilingir Numarası</span>
-                <span class="seo-tag px-3 py-1 rounded-md">acil çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">nöbetçi çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">en yakın çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">yakınımda çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">oto çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">çelik kasa çilingir</span>
-                <span class="seo-tag px-3 py-1 rounded-md">Adresinize konumunuza En yakın Çilingir</span>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="w-full text-center py-3 text-[10px] text-neutral-600 bg-black/40 backdrop-blur-sm z-20">
-            &copy; 2026 cilingirnumarasi.com. Tüm Hakları Saklıdır.
-        </footer>
-
-    </div>
-
-</body>
-</html>
+                <!-- GOOGLE SEO ANAHTAR KELİMELERİ (TDK UYUMLU) -->
+                <div class="cyber-seo-section">
+                    <div class="cyber-seo-title">Hızlı Erişim Terimleri</div>
+                    <div class="cyber-seo-grid">
+                        <span class="cyber-keyword">Çilingir</span>
+                        <span class="cyber-keyword">Anahtarcı</span>
+                        <span class="cyber-keyword">7/24 Çilingir</span>
+                        <span class="cyber-keyword">Çilingir Fiyatı</span>
+                        <span class="cyber-keyword">Çilingir Numarası</span>
+                        <span class="cyber-keyword">Acil Çilingir</span>
+                        <span class="cyber-keyword">Nöbetçi Çilingir</span>
+                        <span class="cyber-keyword">En Yakın Çilingir</span>
